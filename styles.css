@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    overflow-x: hidden;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    font-weight: 800;
+    color:dodgerblue;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color:white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: dodgerblue;
+    border-bottom: 3px solid dodgerblue;
+}
+
+@media (max-width: 995px) {
+    nav{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid dodgerblue;
+        border-bottom: 3px solid dodgerblue;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0,1); 
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        margin: 3rem 0;
+        font-size: 2rem;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid dodgerblue;
+    }
+}
+
+section{
+    padding: 5rem 9% 5rem;
+    min-height: 100vh;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: dodgerblue;
+}
+
+.home-content h3{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 25px dodgerblue;
+    transition: 0.2s linear;
+    position: relative;
+    cursor: pointer;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid dodgerblue;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3)translate();
+    background-color: dodgerblue;
+    box-shadow: 0 0 25px dodgerblue;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2 8rem;
+    background-color: black;
+    color: dodgerblue;
+    font-size: 1.6rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid dodgerblue;
+    letter-spacing: 0.3rem;
+}
+
+.btn:hover{
+    background-color: dodgerblue;
+    color: black;
+    box-shadow: 0 0 25px dodgerblue;
+    transform: scale3d(1.03);
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 2rem; /* Ajoute de l'espace entre le texte et le bouton */
+    padding: 1rem 2.8rem; /* Correction du padding qui était incorrect */
+    background-color: black;
+    color: dodgerblue;
+    font-size: 1.6rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid dodgerblue;
+    letter-spacing: 0.3rem;
+}
+
+.btn:hover{
+    background-color: dodgerblue;
+    color: black;
+    box-shadow: 0 0 25px dodgerblue;
+    transform: scale3d(1.03);
+}
+
+.home-content p{
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+    color: #ccc;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.projects h2{
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: dodgerblue;
+}
+
+.projects h3{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: dodgerblue;
+}
+
+.projects p{
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ccc;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tech-stack {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.tech-stack img {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 0 2px dodgerblue);
+    border: 2px solid white; 
+    border-radius: 0.5rem;  
+    padding: 4px;            
+    background-color: black;
+}
+
+.tech-stack img:hover {
+    transform: scale(1.2);
+}
+
+.project-item {
+    display: none;
+    margin-top: 2rem;
+    border: 1px solid white;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    background-color: black;
+}
+
+.projects label,
+.projects select {
+    font-size: 1.8rem;
+    color: white;
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+    background-color: black;
+    border: white;
+}
+
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+}
+
+.project-images img {
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+
+
