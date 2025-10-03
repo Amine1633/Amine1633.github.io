@@ -36,12 +36,15 @@ header{
     z-index: 100;
 }
 
-.logo{
+.logo {
     font-size: 3rem;
     font-weight: 800;
-    color:dodgerblue;
+    color: dodgerblue;
     cursor: pointer;
     transition: 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .logo:hover{
@@ -194,8 +197,8 @@ span{
 
 .btn {
     display: inline-block;
-    margin-top: 2rem; /* Ajoute de l'espace entre le texte et le bouton */
-    padding: 1rem 2.8rem; /* Correction du padding qui était incorrect */
+    margin-top: 2rem; 
+    padding: 1rem 2.8rem; 
     background-color: black;
     color: dodgerblue;
     font-size: 1.6rem;
@@ -221,10 +224,14 @@ span{
     line-height: 1.6;
 }
 
-.projects h2{
+.projects {
+    padding-top: 12rem;
+}
+
+.projects h2 {
     font-size: 3.5rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     color: dodgerblue;
 }
 
@@ -243,6 +250,46 @@ span{
     max-width: 800px;
     line-height: 1.6;
     margin-left: auto;
+    margin-right: auto;
+}
+
+#project-selector {
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto 4rem auto; 
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: white;
+    background-color: #1e1e1e;
+    border: 2px solid dodgerblue;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#project-selector:hover {
+    border-color: #3aa0ff;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.3);
+}
+
+#project-selector option {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 1rem;
+}
+
+.project-item {
+    display: block;
+    margin-bottom: 4rem;     
+    padding: 3rem;        
+    border: 1px solid dodgerblue;
+    border-radius: 1rem;
+    color: white;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.2);
+    max-width: 1200px;       
+    margin-left: auto;        
     margin-right: auto;
 }
 
@@ -271,12 +318,17 @@ span{
 }
 
 .project-item {
-    display: none;
-    margin-top: 2rem;
-    border: 1px solid white;
-    padding: 1.5rem;
-    border-radius: 0.8rem;
-    background-color: black;
+    display: block;
+    margin-bottom: 4rem;     
+    padding: 3rem;            
+    border: 1px solid dodgerblue;
+    border-radius: 1rem;
+    color: white;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.2);
+    max-width: 1200px;       
+    margin-left: auto;        
+    margin-right: auto;
 }
 
 .projects label,
@@ -293,15 +345,100 @@ span{
 .project-images {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; 
+  gap: 2rem;               
+  justify-content: center;
+  margin-top: 2.5rem;     
+  margin-bottom: 2rem;     
 }
 
 .project-images img {
   max-width: 300px;
   height: auto;
-  margin: 0 auto;
+  margin: 0;            
+  border-radius: 8px;  
 }
 
+.form h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: dodgerblue;
+    margin-bottom: 1.5rem;
+}
 
+.form {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 12rem; 
+    margin-bottom: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5rem;
+    background-color: #1e1e1e;
+    border-radius: 15px;  
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.4); 
+    border: 1px solid rgba(30, 144, 255, 0.6);  
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;    
+    height: auto;            
+    min-height: auto;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form label {
+    font-size: 1.6rem;
+    color: #f1f1f1;
+    margin-bottom: 0.8rem;  
+    margin-top: 1rem;      
+    text-align: left;     
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 0.8rem;
+    border: none;
+    outline: none;
+    background: #2b2b2b;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    margin-bottom: 1.5rem;  
+}
+
+.form button {
+    display: block;     
+    margin: 2rem auto 0;      
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.8rem;
+    background: dodgerblue;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 50%;           
+}
+
+.form button:hover {
+    background: #1c86ee;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px dodgerblue;
+}
+
+.form h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: dodgerblue;
+    margin-bottom: 1.5rem;
+}
 
 
