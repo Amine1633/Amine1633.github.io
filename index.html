@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
 
 </head>
 <body>
@@ -14,13 +15,13 @@
         <a href="#" class="logo">Amine</a> 
 
         <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="project.html">Compétences et Expériences</a>
-            <a href="form.html">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="#projects">Compétences et Expériences</a>
+            <a href="#contact">Contact</a>
 
         </nav>
     </header>
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-img">
             <img src="giyu-tomioka-5k-3840x2160-16854 (1).png" alt="background">
         </div>
@@ -37,5 +38,86 @@
             <a href="cv info (2).pdf" target="_blank" class="btn">Mon CV</a>
         </div>
     </section>
+
+    <section class="projects" id="projects">
+        <h2>Mes Projets</h2>
+
+        <label for="project-selector"></label>
+        <select id="project-selector">
+            <option value="">Sélectionnez un projet</option>
+            <option value="projet1">Projet 1 : Module de traçabilité</option>
+            <option value="projet2">Projet 2 : Tic-Tac-Toe</option>
+            <option value="projet3">Projet 3 : To-Do-List</option>
+            <option value="projet4">Projet 4 : Application GSB</option>
+        </select>
+
+        <div class="project-list">
+            <div class="project-item" id="projet1">
+                <h3>Projet 1 : Module de traçabilité (Terminé)</h3> 
+                <div class="tech-stack">
+                    <img src="/img/Chart.js_logo.svg.png" alt="Chart.js" title="Chart.js">
+                    <img src="/img/HTML5_logo_and_wordmark.svg.png" alt="HTML5" title="HTML5">
+                    <img src="/img/css-logo.png" alt="CSS3" title="CSS3">
+                    <img src="/img/Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript" title="JavaScript">
+                    <img src="/img/PHP-logo.svg.png" alt="PHP" title="PHP">
+                </div>
+                <p>Mon premier projet a eu pour but de répondre à une problématique de visibilité sur les tâches informatiques (d'un service à un autre la visibilité sur ce que fait l'informatique n'est pas forcément claire). Par conséquent j'ai du créer un module qui permettait aux chefs de services et la gouvernance d'avoir de la visibilité sur l'avancement des tâches effectuées par l'équipe informatique.</p>
+                <div class="project-images">
+                    <img src="/screenshots/{3A76AC01-44DB-4F68-879A-3500CFD614EE}.png" alt="Capture d'écran du projet 1 - 1">
+                    <img src="/screenshots/{CCB05441-1C21-4C78-8281-EAF0D9F09517}.png" alt="Capture d'écran du projet 1 - 2">
+                    <img src="/screenshots/{CF57C63F-04CE-4E57-9159-DF4601177A33}.png" alt="Capture d'écran du projet 1 - 3">
+                </div>
+            </div>
+            <div class="project-item" id="projet2">
+                <h3>Projet 2 : Tic-Tac-Toe (Terminé)</h3>
+                <div class="tech-stack">
+                    <img src="/img/Python-logo-notext.svg.png" alt="Python" title="Python">
+                </div>
+                <p>Création d'un Tic-Tac-Toe avec une interface graphique à l'aide du module Tkinter permettant de m'initier à l'utilisation d'un module pour créer une interface graphique. Et également d'approfondir mes connaissances en Python sur les concepts de base avec un projet ludique.</p>
+                <div class="project-images">
+                    <img src="/screenshots/Capture d’écran 2025-09-28 170502.png" alt="Capture d'écran du projet 2 - 1">
+                    <img src="/screenshots/Capture d'écran 2025-09-28 170652.png" alt="Capture d'écran du projet 2 - 2">
+                    <img src="/screenshots/Capture d'écran 2025-09-28 170534.png" alt="Capture d'écran du projet 2 - 3">
+                    <img src="/screenshots/Capture d'écran 2025-09-28 170316.png" alt="Capture d'écran du projet 2 - 4">
+                </div>
+            </div>
+            <div class="project-item" id="projet3">
+                <h3>Projet 3 : To-Do-List (En cours)</h3>
+                <div class="tech-stack">
+                    <img src="/img/HTML5_logo_and_wordmark.svg.png" alt="HTML5" title="HTML5">
+                    <img src="/img/css-logo.png" alt="CSS3" title="CSS3">
+                    <img src="/img/Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript" title="JavaScript">
+                </div>
+                <p>Création d'une to-do-list en JS (POO) avec un systéme de connexion/inscription et A2F</p>
+            </div>
+            <div class="project-item" id="projet4">
+                <h3>Projet 4 : Application GSB (En cours)</h3>
+                <div class="tech-stack">
+                    <img src="/img/d4194dc2-d880-43f7-960c-ea30e05c6531.png" alt="Angular" title="Angular">
+                    <img src="/img/Typescript_logo_2020.svg.png" alt="TypeScript" title="TypeScript">
+                </div>    
+                <p>Projet d'application en TS en cours avec le framework Angular</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="form" id="contact">
+        <form action="https://formspree.io/f/mvgwrzao" method="POST">
+            <h2>Contactez-moi</h2>
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" placeholder="Saisir votre nom" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="_replyto" placeholder="Saisir votre email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Saisir votre message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <div class="page-bottom-space"></div>
+
 </body>
 </html>
